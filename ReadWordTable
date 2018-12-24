@@ -1,0 +1,10 @@
+import docx
+def read_WordTable(path)
+	doc = Document(path)
+	list1=[]
+	for table in doc.tables:
+		for row in table.rows:
+			for cell in row.cells:
+				list1.append(cell.text)
+	return list1
+
